@@ -1,0 +1,31 @@
+
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <mapping package="com.dstevens"/>
+    <mapping class="com.dstevens.players.Troupe"/>
+    <mapping class="com.dstevens.players.Player"/>
+    <mapping class="com.dstevens.characters.PlayerCharacter"/>
+    <mapping class="com.dstevens.characters.skills.CharacterSkill"/>
+    <mapping class="com.dstevens.characters.backgrounds.CharacterBackground"/>
+    <mapping class="com.dstevens.characters.distinctions.CharacterDistinction"/>
+    <mapping class="com.dstevens.characters.distinctions.CharacterFlaw"/>
+    <mapping class="com.dstevens.characters.distinctions.CharacterMerit"/>
+    
+    <mapping class="com.dstevens.characters.changes.SetTrait"/>
+    <mapping class="com.dstevens.characters.changes.RemoveTrait"/>
+    <mapping class="com.dstevens.characters.changes.SetEnumeratedTrait"/>
+    <mapping class="com.dstevens.characters.changes.SetRatedTrait"/>
+    <mapping class="com.dstevens.characters.changes.SetCharacterDefinedTrait"/>
+    <mapping class="com.dstevens.characters.changes.SetDistinction"/>
+    <mapping class="com.dstevens.characters.changes.GainXp"/>
+    <mapping class="com.dstevens.characters.changes.SpendXp"/>
+    <mapping class="com.dstevens.characters.changes.SetAttributeFocus"/>
+    <mapping class="com.dstevens.characters.changes.SetAttribute"/>
+    
+    <mapping class="com.dstevens.persistence.auditing.AuditEvent"/>
+  </session-factory>
+</hibernate-configuration>
