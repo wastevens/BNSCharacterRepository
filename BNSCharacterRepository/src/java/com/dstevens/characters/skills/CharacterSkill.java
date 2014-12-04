@@ -5,7 +5,7 @@ import static com.dstevens.collections.Sets.set;
 import java.util.Set;
 
 import com.dstevens.characters.BNSPlayerCharacter;
-import com.dstevens.characters.traits.CharacterDefinedTrait;
+import com.dstevens.characters.changes.CharacterDefinedTrait;
 import com.dstevens.suppliers.IdSupplier;
 import com.dstevens.utilities.ObjectExtensions;
 

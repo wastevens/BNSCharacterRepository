@@ -1,7 +1,6 @@
 package com.dstevens.characters.changes;
 
 import com.dstevens.characters.BNSPlayerCharacter;
-import com.dstevens.characters.traits.EnumeratedTrait;
 
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;

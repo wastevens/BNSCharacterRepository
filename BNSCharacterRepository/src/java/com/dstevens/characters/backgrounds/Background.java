@@ -1,6 +1,6 @@
 package com.dstevens.characters.backgrounds;
 
-import com.dstevens.characters.traits.DetailLevel;
+import com.dstevens.characters.changes.DetailLevel;
 
 public enum Background {
 

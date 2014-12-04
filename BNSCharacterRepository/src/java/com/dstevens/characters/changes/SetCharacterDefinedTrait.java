@@ -3,7 +3,6 @@ package com.dstevens.characters.changes;
 import java.util.Set;
 
 import com.dstevens.characters.BNSPlayerCharacter;
-import com.dstevens.characters.traits.CharacterDefinedTrait;
 
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;

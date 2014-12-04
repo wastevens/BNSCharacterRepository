@@ -6,9 +6,6 @@ import com.dstevens.characters.backgrounds.Background;
 import com.dstevens.characters.backgrounds.CharacterBackground;
 import com.dstevens.characters.skills.CharacterSkill;
 import com.dstevens.characters.skills.Skill;
-import com.dstevens.characters.traits.CharacterDefinedTrait;
-import com.dstevens.characters.traits.EnumeratedTrait;
-import com.dstevens.characters.traits.RatedTrait;
 
 public enum TraitFactory {
 
