@@ -1,18 +1,13 @@
 package com.dstevens.characters;
 
-import static com.dstevens.collections.Lists.list;
-
 import static com.dstevens.collections.Sets.set;
 
-import java.util.Date;
-import java.util.List;
 import java.util.Set;
 
 import com.dstevens.characters.attributes.MentalAttributeFocus;
 import com.dstevens.characters.attributes.PhysicalAttributeFocus;
 import com.dstevens.characters.attributes.SocialAttributeFocus;
 import com.dstevens.characters.backgrounds.CharacterBackground;
-import com.dstevens.characters.changes.SetTrait;
 import com.dstevens.characters.distinctions.CharacterFlaw;
 import com.dstevens.characters.distinctions.CharacterMerit;
 import com.dstevens.characters.skills.CharacterSkill;
@@ -21,11 +16,13 @@ import com.dstevens.utilities.ObjectExtensions;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
+import javax.persistence.Table;
 
-
+@Entity
+@Table(name="PlayerCharacter")
 public class BNSPlayerCharacter extends PlayerCharacter {
 
 	    @Column(name="physical_attribute")
@@ -59,28 +56,23 @@ public class BNSPlayerCharacter extends PlayerCharacter {
 	    @OneToMany(cascade={CascadeType.ALL})
 	    @JoinTable(name="PlayerCharacter_Flaws")
 	    private final Set<CharacterFlaw> flaws;
-	    
-	    @OneToMany(cascade={CascadeType.ALL})
-	    @OrderColumn(name="order_by")
-	    private final List<SetTrait> traitChangeEvents;
 
 		private int xp;
 	    
 	    //Hibernate only
 	    @Deprecated
 	    public BNSPlayerCharacter() {
-	    	this(null, null, 0, 0, 0, 0, set(), set(), set(), set(), set(), set(), set(), list(), null);
+	    	this(null, null, 0, 0, 0, 0, set(), set(), set(), set(), set(), set(), set());
 	    }
 	    
 	    BNSPlayerCharacter(String id, String name) {
-	        this(id, name, 0, 0, 0, 0, set(), set(), set(), set(), set(), set(), set(),list(), null);
+	        this(id, name, 0, 0, 0, 0, set(), set(), set(), set(), set(), set(), set());
 	    }
 	    
 	    protected BNSPlayerCharacter(String id, String name, int xp,  
 	                                 int physicalAttribute, int mentalAttribute, int socialAttribute, 
 	                                 Set<PhysicalAttributeFocus> physicalAttrbuteFocuses, Set<MentalAttributeFocus> mentalAttrbuteFocuses,  Set<SocialAttributeFocus> socialAttrbuteFocuses,   
-	                                 Set<CharacterSkill> skills, Set<CharacterBackground> backgrounds, Set<CharacterMerit> merits, Set<CharacterFlaw> flaws,
-	                                 List<SetTrait> traitChangeEvents, Date deleteTimestamp) {
+	                                 Set<CharacterSkill> skills, Set<CharacterBackground> backgrounds, Set<CharacterMerit> merits, Set<CharacterFlaw> flaws) {
 	    	super(id, name);
 	        this.xp = xp;
 	        this.physicalAttribute = physicalAttribute;
@@ -93,14 +85,6 @@ public class BNSPlayerCharacter extends PlayerCharacter {
 	        this.backgrounds = backgrounds;
 	        this.merits = merits;
 	        this.flaws = flaws;
-	        this.traitChangeEvents = traitChangeEvents;
-	    }
-	    
-	    @Override
-	    public BNSPlayerCharacter withName(String name) {
-	        return new BNSPlayerCharacter(getId(), name, xp, physicalAttribute, mentalAttribute, socialAttribute,
-	                                      physicalAttributeFocuses, mentalAttrbuteFocuses, socialAttributeFocuses,
-	                                      skills, backgrounds, merits, flaws, traitChangeEvents, null);
 	    }
 	    
 	    public int getPhysicalAttribute() {

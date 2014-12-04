@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 
 @Entity
 @DiscriminatorValue("Attribute")
-public class SetAttribute extends SetTrait {
+public class SetAttribute extends SetBNSCharacterTrait {
 
     @Column(name="rating")
     private int rating;

@@ -57,7 +57,7 @@
 	<classpathentry kind="lib" path="lib/default/spring-tx.jar"/>
 	<classpathentry kind="lib" path="lib/default/text.jar"/>
 	<classpathentry kind="lib" path="lib/default/TheWheel.jar"/>
-	<classpathentry kind="lib" path="lib/default/TroupeLarpCharacterRepository.jar"/>
+	<classpathentry kind="lib" path="lib/default/TroupeLarpCharacterRepository.jar" sourcepath="lib/sources/TroupeLarpCharacterRepository-sources.jar"/>
 	<classpathentry kind="lib" path="lib/default/xml-apis.jar"/>
 	<classpathentry kind="lib" path="lib/default/gson.jar"/>
 	<classpathentry kind="lib" path="lib/default/guava.jar"/>

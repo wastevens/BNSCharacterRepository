@@ -9,7 +9,7 @@ import javax.persistence.Entity;
 
 @Entity
 @DiscriminatorValue("EnumeratedTrait")
-public class SetEnumeratedTrait extends SetTrait {
+public class SetEnumeratedTrait extends SetBNSCharacterTrait {
 
     @Column(name="ordinal")
     private final int ordinal;

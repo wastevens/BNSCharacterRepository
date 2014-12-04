@@ -9,7 +9,7 @@ import javax.persistence.Entity;
 
 @Entity
 @DiscriminatorValue("AttributeFocus")
-public class SetAttributeFocus extends SetTrait {
+public class SetAttributeFocus extends SetBNSCharacterTrait {
 
     @Column(name="ordinal")
     private int attributeFocusOrdinal;

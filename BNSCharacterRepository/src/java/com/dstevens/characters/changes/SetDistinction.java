@@ -9,7 +9,7 @@ import javax.persistence.Entity;
 
 @Entity
 @DiscriminatorValue("Distinction")
-public class SetDistinction extends SetTrait {
+public class SetDistinction extends SetBNSCharacterTrait {
 
     @Column(name="ordinal")
     private final int ordinal;
