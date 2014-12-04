@@ -42,7 +42,7 @@ public class SetAttributeFocus extends SetBNSCharacterTrait {
     
     @Override
     public BNSPlayerCharacter remove(BNSPlayerCharacter character) {
-    	return factory.applyFocusTo(attributeFocusOrdinal, character);
+    	return factory.removeFocusFrom(attributeFocusOrdinal, character);
     }
     
     @Override
