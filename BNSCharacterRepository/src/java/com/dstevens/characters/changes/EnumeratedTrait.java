@@ -6,7 +6,7 @@ import com.dstevens.characters.BNSPlayerCharacter;
 
 
 
-public interface EnumeratedTrait<T extends Enum<?>> {
+public interface EnumeratedTrait<T> {
 
     int ordinal();
     T trait();
