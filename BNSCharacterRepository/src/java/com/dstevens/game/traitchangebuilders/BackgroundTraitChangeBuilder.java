@@ -10,7 +10,7 @@ import com.dstevens.characters.changes.SetCharacterDefinedTrait;
 import com.dstevens.characters.changes.SetTrait;
 import com.dstevens.characters.changes.SpendXp;
 import com.dstevens.characters.changes.TraitChangeStatus;
-import com.dstevens.characters.changes.TraitFactory;
+import com.dstevens.characters.changes.TraitFactoryEnum;
 import com.dstevens.game.TraitChangeBuilder;
 
 public class BackgroundTraitChangeBuilder implements TraitChangeBuilder {
@@ -50,7 +50,7 @@ public class BackgroundTraitChangeBuilder implements TraitChangeBuilder {
     }
 
     private SetCharacterDefinedTrait setSkill() {
-        return new SetCharacterDefinedTrait(TraitChangeStatus.PENDING, CharacterBackground.backgroundFor(background, rating, specialization, focuses), TraitFactory.BACKGROUND);
+        return new SetCharacterDefinedTrait(TraitChangeStatus.PENDING, CharacterBackground.backgroundFor(background, rating, specialization, focuses), TraitFactoryEnum.BACKGROUND);
     }
 
 	@Override

@@ -8,7 +8,7 @@ import com.dstevens.characters.changes.SetCharacterDefinedTrait;
 import com.dstevens.characters.changes.SetTrait;
 import com.dstevens.characters.changes.SpendXp;
 import com.dstevens.characters.changes.TraitChangeStatus;
-import com.dstevens.characters.changes.TraitFactory;
+import com.dstevens.characters.changes.TraitFactoryEnum;
 import com.dstevens.characters.skills.CharacterSkill;
 import com.dstevens.characters.skills.Skill;
 import com.dstevens.game.TraitChangeBuilder;
@@ -50,7 +50,7 @@ public class SkillTraitChangeBuilder implements TraitChangeBuilder {
     }
 
     private SetCharacterDefinedTrait setSkill() {
-        return new SetCharacterDefinedTrait(TraitChangeStatus.PENDING, CharacterSkill.skillFor(skill, rating, specialization, focuses), TraitFactory.SKILL);
+        return new SetCharacterDefinedTrait(TraitChangeStatus.PENDING, CharacterSkill.skillFor(skill, rating, specialization, focuses), TraitFactoryEnum.SKILL);
     }
 
 	@Override
